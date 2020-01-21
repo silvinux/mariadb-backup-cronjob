@@ -34,7 +34,7 @@ objects:
   - apiVersion: batch/v1beta1
     kind: CronJob
     metadata:
-      name: mariadb-backup
+      name: ${DATABASE_NAME}-mariadb-backup
     spec:
       schedule: ${DATABASE_BACKUP_SCHEDULE}
       concurrencyPolicy: Forbid
